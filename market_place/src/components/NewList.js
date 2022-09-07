@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-function NewList ( { list } ) {
+function NewList () {
 
     const url = 'http://localhost:9292';
     const [ data, setData ] = useState( {
@@ -12,30 +12,30 @@ function NewList ( { list } ) {
         customer_id: ""
     } );
 
-    function submit (e) {
-        e.preventDefault()
+    function submit ( e ) {
+        e.preventDefault();
         axios.post( url, {
             name: data.name,
-            amount: parseInt(data.amount),
+            amount: parseInt( data.amount ),
             image_url: data.image_url,
-            farmer_id: parseInt(data.farmer_id),
-            customer_id: parseInt(data.customer_id)
+            farmer_id: parseInt( data.farmer_id ),
+            customer_id: parseInt( data.customer_id )
         } )
             .then( res => {
-            console.log( res.data );
-        })
+                console.log( res.data );
+            } );
     }
 
     function handle ( e ) {
-        const newData = { ...data }
-        newData[ e.target.id ] = e.target.value
+        const newData = { ...data };
+        newData[ e.target.id ] = e.target.value;
         setData( newData );
         console.log( newData );
     }
 
     return (
         <div>
-            <form onSubmit={(e)=>submit(e)}>
+            <form onSubmit={ ( e ) => submit( e ) }>
                 <input onChange={ ( e ) => handle( e ) } id="name" value={ data.name } type="text" placeholder='item name' />
                 <input onChange={ ( e ) => handle( e ) } id="amount" value={ data.amount } type="number" placeholder="item quantity" />
                 <input onChange={ ( e ) => handle( e ) } id="image_url" value={ data.image_url } type="text" placeholder="item image" />

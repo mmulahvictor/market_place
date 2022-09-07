@@ -16,7 +16,7 @@ function ItemList () {
                 <img src={ x.image_url } alt={ x.name } />
                 <p key={ x.id }>{ x.name }</p>
                 <p>{ x.amount }</p>
-                {/* <NewList list = {lists} /> */}
+                {/* <NewList list = {lists} /> */ }
             </>
         )
         )
@@ -24,7 +24,7 @@ function ItemList () {
 
     return (
         <div>
-            <NewList list={ lists } />
+            <NewList />
             { array }
 
         </div>
