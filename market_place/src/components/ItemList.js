@@ -13,18 +13,18 @@ function ItemList () {
         // console.log( lists )
         lists.map( ( x ) => (
             <>
-                <img src={ x.image } alt={ x.name } />
-                <li key={ x.id }>{ x.name }</li>
-                <NewList list = {lists} />
+                <img src={ x.image_url } alt={ x.name } />
+                <p key={ x.id }>{ x.name }</p>
+                <p>{ x.amount }</p>
+                {/* <NewList list = {lists} /> */}
             </>
         )
-
         )
     );
 
     return (
         <div>
-
+            <NewList list={ lists } />
             { array }
 
         </div>
