@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-// import NewList from './NewList';
 
 function ItemList () {
     const [ lists, setList ] = useState( [] );
@@ -10,21 +9,18 @@ function ItemList () {
             .then( ( data ) => setList( data ) );
     }, [] );
     let array = (
-        // console.log( lists )
         lists.map( ( x ) => (
-            <>
-                <img src={ x.image_url } alt={ x.name } />
+            <div>
+                <img src={ x.image_url } alt={ x.name } className="image" />
                 <p key={ x.id }>{ x.name }</p>
                 <p>{ x.amount }</p>
-                {/* <NewList list = {lists} /> */ }
-            </>
+            </div>
         )
         )
     );
 
     return (
         <div className='div5'>
-            {/* <NewList /> */}
             { array }
 
         </div>
