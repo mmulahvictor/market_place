@@ -1,19 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 function Register () {
-    function handleSubmit (e) {
+    function handleSubmit ( e ) {
         e.preventDefault();
     }
 
-  return (
-      <div>
-          <form onSubmit={handleSubmit}>
-              <input type="text" placeholder="Enter name..." />
-              <input type="text" placeholder="Enter location..." />
-              <input type="number" placeholder="Enter phone..." />
-          </form>
-    </div>
-  )
+    return (
+        <div>
+            
+        </div>
+    );
 }
 
-export default Register
+export default Register;

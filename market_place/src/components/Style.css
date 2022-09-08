@@ -1,0 +1,74 @@
+/* home */
+/* .header {
+    display: flex;
+} */
+
+
+/* NewList */
+.input_customer {
+    display: none;
+}
+
+.new_list_input{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    border-color: #52c234;
+    border-top: none;
+}
+
+.new_list_btn {
+    background-image: linear-gradient(to right, #52c234 0%, #061700 51%, #52c234 100%);
+    margin-bottom: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.new_list_btn:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* responsive design */
+.App {
+    display: grid;
+    grid-template-columns: 0.4fr repeat(2, 1fr);
+    grid-template-rows: 0.07fr 0.4fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "title title title"
+        "div4 div2 div3"
+        "div4 div5 div5"
+        "div4 div5 div5";
+}
+
+.title {
+    grid-area: title;
+    background-color: #588157;
+}
+
+.div2 {
+    grid-area: div2;
+}
+
+.div3 {
+    grid-area: div3;
+}
+
+.div4 {
+    grid-area: div4;
+    background-color: #a3b18a;
+}
+
+.div5 {
+    grid-area: div5;
+    background-color: #dad7cd;
+}

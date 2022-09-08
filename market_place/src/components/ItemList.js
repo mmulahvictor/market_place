@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import NewList from './NewList';
+// import NewList from './NewList';
 
 function ItemList () {
     const [ lists, setList ] = useState( [] );
@@ -23,8 +23,8 @@ function ItemList () {
     );
 
     return (
-        <div>
-            <NewList />
+        <div className='div5'>
+            {/* <NewList /> */}
             { array }
 
         </div>

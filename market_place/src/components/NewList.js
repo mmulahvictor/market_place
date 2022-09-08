@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Style.css'
 
 function NewList () {
 
@@ -34,14 +35,14 @@ function NewList () {
     }
 
     return (
-        <div>
+        <div className='div4'>
             <form onSubmit={ ( e ) => submit( e ) }>
-                <input onChange={ ( e ) => handle( e ) } id="name" value={ data.name } type="text" placeholder='item name' />
-                <input onChange={ ( e ) => handle( e ) } id="amount" value={ data.amount } type="number" placeholder="item quantity" />
-                <input onChange={ ( e ) => handle( e ) } id="image_url" value={ data.image_url } type="text" placeholder="item image" />
-                <input onChange={ ( e ) => handle( e ) } id="farmer_id" value={ data.farmer_id } type="number" placeholder="farmer's id" />
-                <input onChange={ ( e ) => handle( e ) } id="customer_id" value={ data.customer_id } type="number" placeholder="DO NOT FILL!!" />
-                <button>Submit</button>
+                <input onChange={ ( e ) => handle( e ) } id="name" value={ data.name } type="text" placeholder='item name' className='new_list_input' /> <br /><br />
+                <input onChange={ ( e ) => handle( e ) } id="amount" value={ data.amount } type="number" placeholder="item quantity" className='new_list_input' /><br /><br />
+                <input onChange={ ( e ) => handle( e ) } id="image_url" value={ data.image_url } type="text" placeholder="item image" className='new_list_input' /><br /><br />
+                <input onChange={ ( e ) => handle( e ) } id="farmer_id" value={ data.farmer_id } type="number" placeholder="farmer's id" className='new_list_input' /><br /><br />
+                <input onChange={ ( e ) => handle( e ) } id="customer_id" value={ data.customer_id } type="number" placeholder="DO NOT FILL!!" className='input_customer' />
+                <button className='new_list_btn'>Submit</button>
             </form>
         </div>
     );
