@@ -1,14 +1,14 @@
-import React from 'react'
-import Register from './Register'
-import NewList from './NewList'
+import React from 'react';
+import Register from './Register';
+import NewList from './NewList';
 
-function Sidebar() {
+function Sidebar () {
   return (
-      <div className="div4">
-          <Register />
-          <NewList />
+    <div className="div4">
+      <Register />
+      <NewList />
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;

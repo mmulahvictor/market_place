@@ -36,6 +36,7 @@ function NewList () {
 
     return (
         <div className='div4'>
+            <h3>Add crop</h3>
             <form onSubmit={ ( e ) => submit( e ) }>
                 <input onChange={ ( e ) => handle( e ) } id="name" value={ data.name } type="text" placeholder='item name' className='new_list_input' /> <br /><br />
                 <input onChange={ ( e ) => handle( e ) } id="amount" value={ data.amount } type="number" placeholder="item quantity" className='new_list_input' /><br /><br />
