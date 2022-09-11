@@ -25,7 +25,7 @@ console.log(lists);
     }, [] );
     let array = (
         lists.map( ( x ) => (
-            <div className="templates" key={ x.id }>
+            <div className="templete box" key={ x.id }>
                 <img src={ x.image_url } alt={ x.name } className="image" />
                 <p>{ x.name }</p>
                 <p>{ x.amount }bags</p>

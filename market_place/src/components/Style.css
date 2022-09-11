@@ -86,19 +86,20 @@
 }
 
 /* item list */
-.templete.box{
-    padding-bottom: 10px;
+.templete:hover{
+    /* padding-bottom: 10px; */
+    padding: 1px;
     --shadow-color: hsl(220deg 60% 50%);
 }
 
 .box{
     filter: drop-shadow(1px 2px 8px var(--shadow-color));
+    margin-bottom: 10px;
 }
 
 .image{
     height: 200px;
     width: 320px;
-    /* margin: 10px; */
 }
 
 .delete-btn {
