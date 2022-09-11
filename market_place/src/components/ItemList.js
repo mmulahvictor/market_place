@@ -29,8 +29,8 @@ console.log(lists);
                 <img src={ x.image_url } alt={ x.name } className="image" />
                 <p>{ x.name }</p>
                 <p>{ x.amount }bags</p>
-                <button onClick={ handleDeleteClick } id={ x.id } className="delete-btn">Delete</button>
                 <EditItem id={ x.id } lists={ x } setLists={ setList } />
+                <button onClick={ handleDeleteClick } id={ x.id } className="delete-btn">Delete</button>
             </div>
         )
         )
