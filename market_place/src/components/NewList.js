@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Style.css'
+// import Form from './Form';
 
 function NewList () {
 
@@ -25,6 +26,7 @@ function NewList () {
             .then( res => {
                 console.log( res.data );
             } );
+        window.location.reload()
     }
 
     function handle ( e ) {

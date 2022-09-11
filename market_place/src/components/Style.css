@@ -16,6 +16,7 @@
 .title {
     grid-area: title;
     background-color: #588157;
+    color: white;
 }
 
 .div2 {
@@ -42,6 +43,15 @@
     flex-wrap: wrap;
 }
 
+/* home */
+#text{
+    font-size: 20px;
+    text-align: left;
+}
+
+.div2 h3{
+    font-size: 23px;
+}
 
 /* NewList */
 .input_customer {
@@ -130,4 +140,9 @@
 
 .delete-btn:active {
     top: 2px;
+}
+
+/* BuyItem */
+#hide-item{
+    display: none;
 }

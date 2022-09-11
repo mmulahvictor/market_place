@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import EditItem from './EditItem';
 
 function ItemList () {
     const [ lists, setList ] = useState( [] );
@@ -6,7 +7,6 @@ function ItemList () {
 
     function handleDeleteClick ( e ) {
         let url = `http://localhost:9292/${ e.target.id }`
-        console.log( url )
         fetch( url, {
             method: "DELETE"
         } )
@@ -15,8 +15,9 @@ function ItemList () {
                 const updatedLists = lists.filter( ( q ) => q.id !== e.target.id );
                 setList( updatedLists );
             } );
+        window.location.reload()
     }
-
+console.log(lists);
     useEffect( () => {
         fetch( "http://localhost:9292" )
             .then( ( resp ) => resp.json() )
@@ -27,8 +28,9 @@ function ItemList () {
             <div className="templates" key={ x.id }>
                 <img src={ x.image_url } alt={ x.name } className="image" />
                 <p>{ x.name }</p>
-                <p>{ x.amount }</p>
-                <button onClick={handleDeleteClick} id={x.id} className="delete-btn">Delete</button>
+                <p>{ x.amount }bags</p>
+                <button onClick={ handleDeleteClick } id={ x.id } className="delete-btn">Delete</button>
+                <EditItem id={ x.id } lists={ x } setLists={ setList } />
             </div>
         )
         )
