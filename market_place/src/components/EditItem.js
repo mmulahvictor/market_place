@@ -24,7 +24,7 @@ function EditItem ( { lists, setLists, id } ) {
     return (
         <div id='hide-card'>
             
-            { isedit ? <Form id={ id } lists={lists} /> : <button onClick={ handleChange } id= {id}>Edit</button> }
+            { isedit ? <Form id={ id } lists={lists} /> : <button className='edit-btn' onClick={ handleChange } id= {id}>Edit</button> }
         </div>
     );
 }
