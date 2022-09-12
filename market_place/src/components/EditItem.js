@@ -10,7 +10,7 @@ function EditItem ( { lists, setLists, id } ) {
             setEditing(()=> !isedit)
         }
         console.log(e.target.id);
-        fetch( `http://localhost:9292/${ e.target.id }`, {
+        fetch( `https://my-farmers-product-api.herokuapp.com/items/${ e.target.id }`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json",

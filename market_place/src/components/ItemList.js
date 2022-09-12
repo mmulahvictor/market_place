@@ -6,7 +6,7 @@ function ItemList () {
 
 
     function handleDeleteClick ( e ) {
-        let url = `http://localhost:9292/${ e.target.id }`
+        let url = `https://my-farmers-product-api.herokuapp.com/items/${ e.target.id }`
         fetch( url, {
             method: "DELETE"
         } )
@@ -19,7 +19,7 @@ function ItemList () {
     }
 console.log(lists);
     useEffect( () => {
-        fetch( "http://localhost:9292" )
+        fetch( "https://my-farmers-product-api.herokuapp.com/items" )
             .then( ( resp ) => resp.json() )
             .then( ( data ) => setList( data ) );
     }, [] );

@@ -5,7 +5,7 @@ import './Style.css'
 
 function NewList () {
 
-    const url = 'http://localhost:9292';
+    const url = 'https://my-farmers-product-api.herokuapp.com/items';
     const [ data, setData ] = useState( {
         name: "",
         amount: "",

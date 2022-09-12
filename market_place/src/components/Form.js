@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function Form ( { id, lists } ) {
     
-    const url = `http://localhost:9292/${ id }`;
+    const url = `https://my-farmers-product-api.herokuapp.com/items/${ id }`;
     const [ formData, setFormData ] = useState( lists )
 
     function submit ( e ) {
