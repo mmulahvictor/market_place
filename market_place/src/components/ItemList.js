@@ -11,18 +11,18 @@ function ItemList () {
             method: "DELETE"
         } )
             .then( ( r ) => r.json() )
-            .then( () => {
-                const updatedLists = lists.filter( ( q ) => q.id !== e.target.id );
-                setList( updatedLists );
-            } );
-        window.location.reload()
+            .then( (deletedObj) => handleDelete(deletedObj))
     }
-console.log(lists);
+    function handleDelete ( deletedObj ) {
+        let newList = lists.filter( ( item ) => item.id !== deletedObj.id )
+        setList(newList)
+    }
+
     useEffect( () => {
         fetch( "https://my-farmers-product-api.herokuapp.com/items" )
             .then( ( resp ) => resp.json() )
             .then( ( data ) => setList( data ) );
-    }, [] );
+    }, [lists] );
     let array = (
         lists.map( ( x ) => (
             <div className="templete box" key={ x.id }>

@@ -23,17 +23,13 @@ function NewList () {
             farmer_id: parseInt( data.farmer_id ),
             customer_id: parseInt( data.customer_id )
         } )
-            .then( res => {
-                console.log( res.data );
-            } );
-        window.location.reload()
+        setData("")
     }
 
     function handle ( e ) {
         const newData = { ...data };
         newData[ e.target.id ] = e.target.value;
         setData( newData );
-        console.log( newData );
     }
 
     return (
