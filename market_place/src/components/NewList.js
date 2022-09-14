@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Style.css'
+import './Style.css';
 // import Form from './Form';
 
 function NewList () {
@@ -22,8 +22,7 @@ function NewList () {
             image_url: data.image_url,
             farmer_id: parseInt( data.farmer_id ),
             customer_id: parseInt( data.customer_id )
-        } )
-        setData("")
+        } );
     }
 
     function handle ( e ) {
@@ -35,12 +34,12 @@ function NewList () {
     return (
         <div className='div4'>
             <h3>Add crop</h3>
-            <form onSubmit={ ( e ) => submit( e ) }>
-                <input onChange={ ( e ) => handle( e ) } id="name" value={ data.name } type="text" placeholder='item name' className='new_list_input' /> <br /><br />
-                <input onChange={ ( e ) => handle( e ) } id="amount" value={ data.amount } type="number" placeholder="item quantity" className='new_list_input' /><br /><br />
-                <input onChange={ ( e ) => handle( e ) } id="image_url" value={ data.image_url } type="text" placeholder="item image" className='new_list_input' /><br /><br />
-                <input onChange={ ( e ) => handle( e ) } id="farmer_id" value={ data.farmer_id } type="number" placeholder="farmer's id" className='new_list_input' /><br /><br />
-                <input onChange={ ( e ) => handle( e ) } id="customer_id" value={ data.customer_id } type="number" placeholder="DO NOT FILL!!" className='input_customer' />
+            <form onSubmit={ submit }>
+                <input onChange={ handle } id="name" value={ data.name } type="text" placeholder='item name' className='new_list_input' /> <br /><br />
+                <input onChange={ handle } id="amount" value={ data.amount } type="number" placeholder="item quantity" className='new_list_input' /><br /><br />
+                <input onChange={ handle } id="image_url" value={ data.image_url } type="text" placeholder="item image" className='new_list_input' /><br /><br />
+                <input onChange={ handle } id="farmer_id" value={ data.farmer_id } type="number" placeholder="farmer's id" className='new_list_input' /><br /><br />
+                <input onChange={ handle } id="customer_id" value={ data.customer_id } type="number" placeholder="DO NOT FILL!!" className='input_customer' />
                 <button className='new_list_btn'>Submit</button>
             </form>
         </div>

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import EditItem from './EditItem';
+// import Register from './Register';
 
 function ItemList () {
     const [ lists, setList ] = useState( [] );
@@ -40,8 +41,8 @@ function ItemList () {
 
     return (
         <div className='div5'>
+            {/* <Register /> */}
             { array }
-
         </div>
     );
 }

@@ -5,6 +5,7 @@ function EditItem ( { lists, setLists, id } ) {
     const [ isedit, setEditing ] = useState( false )
 
     function handleChange ( e ) {
+        e.preventDefault()
         if ( e )
         {
             setEditing(()=> !isedit)

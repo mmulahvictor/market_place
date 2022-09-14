@@ -3,9 +3,9 @@ import axios from 'axios';
 
 
 function Form ( { id, lists } ) {
-    
+
     const url = `https://my-farmers-product-api.herokuapp.com/items/${ id }`;
-    const [ formData, setFormData ] = useState( lists )
+    const [ formData, setFormData ] = useState( lists );
 
     function submit ( e ) {
         e.preventDefault();
@@ -19,22 +19,23 @@ function Form ( { id, lists } ) {
             .then( res => {
                 console.log( res.formData );
             } );
-        window.location.reload()
+        window.location.reload();
     }
-    function handleChange(e){
-        setFormData( { ...formData, [ e.target.name ]: e.target.value } )
+    function handleChange ( e ) {
+        e.preventDefault()
+        setFormData( { ...formData, [ e.target.name ]: e.target.value } );
     }
-    console.log(formData);
-  return (
-      <form onSubmit={ ( e ) => submit( e ) }>
-          <input onChange={handleChange} id="name" name='name' defaultValue={ lists.name } type="text" placeholder='item name' className='new_list_input' /> <br /><br />
-          <input onChange={ handleChange } id="amount" name='amount' defaultValue={ lists.amount } type="number" placeholder="item quantity" className='new_list_input' /><br /><br />
-          <input onChange={ handleChange } id="image_url" name='image_url' defaultValue={ lists.image_url } type="text" placeholder="item image" className='new_list_input' /><br /><br />
-          <input onChange={ handleChange } id="farmer_id" name='farmer_id' defaultValue={ lists.farmer_id } type="number" placeholder="farmer's id" className='new_list_input' /><br /><br />
-          <input onChange={ handleChange } id="customer_id" name='customer_id' defaultValue={ lists.customer_id } type="number" placeholder="DO NOT FILL!!" className='input_customer' />
-          <button className='new_list_btn'>Submit</button>
-      </form>
-  )
+    console.log( formData );
+    return (
+        <form onSubmit={ submit }>
+            <input onChange={ handleChange } id="name" name='name' defaultValue={ lists.name } type="text" placeholder='item name' className='new_list_input' /> <br /><br />
+            <input onChange={ handleChange } id="amount" name='amount' defaultValue={ lists.amount } type="number" placeholder="item quantity" className='new_list_input' /><br /><br />
+            <input onChange={ handleChange } id="image_url" name='image_url' defaultValue={ lists.image_url } type="text" placeholder="item image" className='new_list_input' /><br /><br />
+            <input onChange={ handleChange } id="farmer_id" name='farmer_id' defaultValue={ lists.farmer_id } type="number" placeholder="farmer's id" className='new_list_input' /><br /><br />
+            <input onChange={ handleChange } id="customer_id" name='customer_id' defaultValue={ lists.customer_id } type="number" placeholder="DO NOT FILL!!" className='input_customer' />
+            <button className='new_list_btn'>Submit</button>
+        </form>
+    );
 }
 
-export default Form
+export default Form;
