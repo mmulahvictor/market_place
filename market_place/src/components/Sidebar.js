@@ -1,12 +1,12 @@
 import React from 'react';
-import Register from './Register';
-import NewList from './NewList';
+import { Link } from 'react-router-dom';
 
 function Sidebar () {
   return (
     <div className="div4">
-      <Register />
-      <NewList />
+      <Link to='/' className='link'>Home</Link>
+      <Link to='/register' className='link'>Register</Link>
+      <Link to='/newlist' className='link'>Add Crop</Link>
     </div>
   );
 }
